@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>simpleform</title>
+</head>
+<body>
+<form action="/gymcode.php" method="post">
+    <fieldset>
+        <legend>simpleform</legend>
+        Chọn ngày giao hàng:
+      <input type="date" name="date" id="selectdate">
+        <br>
+        what your address ?
+        <input type="text" name="address" >
+        <br>
+        what would you like to buy ?
+        <select name="category" id="product">
+            <option value="shirt">áo</option>
+            <option value="pants">quần</option>
+            <option value="glasses">kính</option>
+        </select>
+        <br>
+        what would you like  color to product ?
+        <input type="color" name="color" id="selectcolor">
+        <br>
+        How many products do you want to buy?
+        <br>
+        <label><input type="radio" name="quantity" value="120"> 1-120$</label>
+        <br>
+        <label><input type="radio" name="quantity" value="200"> 2-200$</label>
+        <br>
+        <label><input type="radio" name="quantity value="300"" > 3-300$</label>
+        <br>
+        <label><input type="radio" name="quantity value="3800"" > 4-380$</label>
+        <br>
+        firstname:
+        <input type="text" name="firstname"><br>
+        lastname:
+        <input type="text" name="lastname"><br>
+        number phone:
+        <input type="number" name="phone"><br>
+        email:
+        <input type="email" name="email"><br>
+        <input type="submit" value="sent" >
+        <input type="reset" value="reset">
+
+    </fieldset>
+</form>
+</body>
+</html>
