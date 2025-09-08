@@ -6,6 +6,34 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .question { margin: 12px 0 18px; }
+        textarea { width: 100%; max-width: 820px; height: 120px; }
+
+        .likert {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 820px;
+        }
+        .likert th, .likert td {
+            border: 1px solid #ddd;
+            padding: 10px 8px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .likert thead th {
+            background: #eee;
+            font-weight: 600;
+        }
+        .likert .stmt {
+            text-align: left;
+            width: 45%;
+            font-weight: 600;
+        }
+        .note { font-size: 12px; color:#666; margin-top: 6px; }
+        .submit { margin-top: 16px; }
+    </style>
 </head>
 <body>
 <h1>Market Research Survey</h1>
@@ -44,6 +72,51 @@
     $ <input type="number" name="Dollars" > . <input type="number" name="Cents"> <br>
     <label style="margin-left: 30px" >Dollars</label>
     <label style=" margin-left: 120px" >Cents</label>
+    <div class="question">
+        <label for="features"><b>What features would you like to see in the new product.</b></label><br>
+        <textarea id="features" name="features"></textarea>
+    </div>
+
+    <p><b>Please rate your level of agreement with the following statements.</b></p>
+
+    <fieldset style="border:0; padding:0; margin:0;">
+        <table class="likert" role="grid">
+            <thead>
+            <tr>
+                <th class="stmt"></th>
+                <th>Strongly Disagree<br><span class="note">1</span></th>
+                <th>Disagree<br><span class="note">2</span></th>
+                <th>Agree<br><span class="note">3</span></th>
+                <th>Strongly Agree<br><span class="note">4</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="stmt">Our products are priced fairly.</td>
+                <td><input type="radio" name="priced" value="1" required></td>
+                <td><input type="radio" name="priced" value="2"></td>
+                <td><input type="radio" name="priced" value="3"></td>
+                <td><input type="radio" name="priced" value="4"></td>
+            </tr>
+            <tr>
+                <td class="stmt">Our products are high quality.</td>
+                <td><input type="radio" name="quality" value="1" required></td>
+                <td><input type="radio" name="quality" value="2"></td>
+                <td><input type="radio" name="quality" value="3"></td>
+                <td><input type="radio" name="quality" value="4"></td>
+            </tr>
+            <tr>
+                <td class="stmt">You would recommend our product to a friend or coworker.</td>
+                <td><input type="radio" name="recommend" value="1" required></td>
+                <td><input type="radio" name="recommend" value="2"></td>
+                <td><input type="radio" name="recommend" value="3"></td>
+                <td><input type="radio" name="recommend" value="4"></td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+    <button class="submit" type="submit">Submit</button>
 
 </form>
 
