@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+<form class="form" action="" method="post">
+    <table class="table" >
+        <tr class="head_table">
+            <th colspan="2" style="padding:5px;text-align: center; background:#ff4500; color:white;">
+                SỞ THÍCH CỦA BẠN
+            </th>
+        </tr>
+
+        <tr>
+            <td class="text_color"><label for="fullname">Họ và Tên:</label></td>
+            <td><input  type="text" id="fullname" name="fullname" required></td>
+        </tr>
+
+        <tr>
+            <td class="text_color"><label for="email">Email:</label></td>
+            <td><input  type="email" id="email" name="email" required></td>
+        </tr>
+
+        <tr>
+            <td class="text_color">Sở Thích:</td>
+            <td>
+                <table class="tick_hobbies">
+                    <tr>
+                        <td><label><input type="checkbox" name="hobby" value="Thể Thao"> Thể Thao</label></td>
+                        <td><label><input type="checkbox" name="hobby" value="Âm Nhạc"> Âm Nhạc</label></td>
+                        <td><label><input type="checkbox" name="hobby" value="Game"> Game</label></td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox" name="hobby" value="Bóng Đá"> Bóng Đá</label></td>
+                        <td><label><input type="checkbox" name="hobby" value="Đọc Sách"> Đọc Sách</label></td>
+                        <td><label><input type="checkbox" name="hobby" value="Du Lịch"> Du Lịch</label></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><label><input type="checkbox" name="hobby" value="Lướt Web"> Lướt Web</label></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align: center">
+                <input class="button" type="submit" value="Gửi Thông tin">
+                <input class="button" type="reset" value="Nhập Lại">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
