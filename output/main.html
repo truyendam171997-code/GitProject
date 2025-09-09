@@ -10,8 +10,17 @@
 </head>
 <body>
 <span id="message"> </span>
-<input type = "button" id="btnMess" value="click me">
+<input type = "button" id="btnMess1" value="bai1" onclick="alert('xin chao')" >
+<input type = "button" id="btnMess2" value="bai2" >
 
-<script src="js.js"></script>
+
+<script  >
+
+        let message2 = document.getElementById("btnMess2");
+        message2.addEventListener("click",messagebtn);
+        function messagebtn(){
+            alert("xin chao");
+        }
+</script>
 </body>
 </html>
