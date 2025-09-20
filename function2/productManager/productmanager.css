@@ -1,0 +1,50 @@
+.productTable{
+    display: block;
+    border: 1px solid #000;
+    width: 500px;
+    margin: 40px auto;
+}
+
+.btn{
+    color: white;
+    min-width: 60px;
+    text-align: center;
+    border: white;
+    border-radius: 5px;
+    width: 10%;
+    background: #2ecc71;
+    padding: 6px 12px;
+
+}
+
+.enteraddproduct{
+    width: 500px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    text-align: center;
+}
+.product_tr{
+    text-align: center;
+}
+.inputproduct{
+
+    width: 200px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.lableproduct{
+    display: inline-block;
+    width: 200px;
+}
+.product_td{
+    text-align: center;
+    width: 100px;
+}
+.total{
+    display: inline-block;
+    width: 50px;
+}
+.name{
+    display: inline-block;
+    width: 150px;
+}

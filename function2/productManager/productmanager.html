@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="productmanager.css">
+</head>
+<body>
+<div class="enteraddproduct">
+    <label>Nhập tên sản phẩm cần thêm:</label>
+    <br>
+    <input  class="inputproduct" type="text"  id="addProduct">
+    <button class="btn lableproduct" onclick="addProduct()" id="btnAddProduct">Thêm sản phẩm</button>
+</div>
+
+<table class="productTable">
+    <thead>
+        <tr>
+            <th class="stt">STT</th>
+            <th class="name">NAME</th>
+            <th colspan="2" class="acction">ACTION</th>
+
+        </tr>
+    </thead>
+
+    <tbody id="list_Product" >
+     <tr class="product_tr">
+         <td >1</td>
+         <td class='name'>name</td>
+         <td class="product_td">delete</td>
+         <td class="product_td">edit</td>
+     </tr>
+    <tr> <th colspan='4' class='total' id ='totalProduct'>TOTAL</th> </tr>
+
+    </tbody>
+</table>
+
+<script src="productmanagerJs.js"></script>
+</body>
+</html>
