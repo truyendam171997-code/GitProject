@@ -43,6 +43,25 @@ function createBossPlanet() {
 }
 
 
+// kiem tra thoi diem xuat hien boss
+function checkuplevel(){
+    if(score>= 10000 * lv   ){
+        lv ++;
+        createBossPlanet();
+        if (  planets.length === 0 || score >= 10000){ score = score+950;
+            idsetinterval = setInterval(createPlanet,2000);
+        }
+    }
+}
+
+// hàm tăng cấp
+let lv = 1 ;
+function uplevels(lv){
+    for (c of planets){
+        c.uplevel(lv)
+    }
+}
+
 //xóa hành tinh
 function deletePlanet() {
     for (let i = planets.length-1 ; i >= 0; i--){
@@ -53,10 +72,11 @@ function deletePlanet() {
     }
 }
 
-// bấm nút để bắn đạn
+// CLICK chuột để bắn đạn
 let bullets = [];
   window.addEventListener("click",() =>   spaceShip1.fire(bullets)  )
 
+// xoá đạn khỏi map
 function  deleteBullets() {
     for (let i = bullets.length-1 ; i >= 0; i--){
         if (bullets[i]._y + bullets[i]._radius <= 0) {
@@ -75,7 +95,7 @@ function hit(){
                 planets[i]._hp --;
                 if(planets[i]._hp <= 0 ){
                     planets.splice(i,1);
-                    score += 10000;
+                    score += 400;
                     break;
                 }
                 bullets.splice(j,1);
@@ -83,6 +103,7 @@ function hit(){
         }
     }
 }
+
 // hiện thị thông số trên canavas
 function drawinformation(){
     // hiển thị điểm
@@ -106,27 +127,6 @@ function drawinformation(){
 
 }
 
-// hàm tăng cấp
-function uplevels(lv){
-    for (c of planets){
-        c.uplevel(lv)
-    }
-}
-let lv = 1 ;
-function checkuplevel(){
-    if(score>= 10000 * lv   ){
-        lv ++;
-        createBossPlanet();
-        if (  planets.length === 0 || score >= 10000){ score = score+950;
-            idsetinterval = setInterval(createPlanet,2000);
-        }
-
-
-
-    }
-    }
-
-
 
 
 //  hàm game over
@@ -143,10 +143,8 @@ function gameOver() {
             }
             planets.splice(i,1);
             break;
-
         }
     }
-
 }
 
 // hàm khởi tạo
@@ -177,6 +175,7 @@ function init(){
     hit();
     drawinformation();
     checkuplevel()
+
     // nếu gameOver dừng chạy init
     gameOver();
     if(!isgameover){

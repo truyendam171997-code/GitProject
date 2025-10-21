@@ -27,9 +27,9 @@ function circle(){
     let area = 3.14*(radius*radius);
     let circumference = +(2*radius)*3.14;
     let resultArea = document.getElementById("resultArea")
-    resultArea.innerHTML= "area of circle: "+ area;
+    resultArea.innerHTML= "area of circle.html: "+ area;
     let resultcircumference = document.getElementById("resultcircumference")
-    resultcircumference.innerHTML= "circumference of circle: "+ circumference;
+    resultcircumference.innerHTML= "circumference of circle.html: "+ circumference;
 }
 let Calculation=document.getElementById("Calculation")
 Calculation.addEventListener("click",circle);

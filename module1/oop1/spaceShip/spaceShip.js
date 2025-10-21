@@ -7,7 +7,6 @@ class spaceShip {
     _x;
     _y;
 
-
     constructor( width, height, canvaswidth , canvasheight) {
         this._ctx = document.getElementById("Game_vip").getContext("2d");
         this._width = width;
